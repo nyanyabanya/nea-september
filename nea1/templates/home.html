@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              
+              <small class="text-muted">{{ post.placement }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.user }}</a></h2>
+            <p class="mr-2" href="#">score: {{ post.score }}</p>
+            <p class="article-content">date played: {{ post.date_played }}</p>
+          </div>
+        </article>
+    {% endfor %}
+    
+<form action="#" method="POST">
+  <input type="email" name="email" placeholder="Enter Email" value="{{email if email}}">
+  <input type="submit" value="submit">
+  
+</form>
+{% endblock content %}
